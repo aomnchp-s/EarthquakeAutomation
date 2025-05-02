@@ -1,0 +1,21 @@
+name: Run Python Script Every 10 Minutes
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # ทุก 10 นาที (เวลา UTC)
+  workflow_dispatch:  # เพิ่มปุ่มให้เรากดรันเองได้ด้วย
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run script
+        run: python your_script.py
