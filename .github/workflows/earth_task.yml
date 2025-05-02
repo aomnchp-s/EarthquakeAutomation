@@ -2,7 +2,7 @@ name: Run Python Script Every 10 Minutes
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # ทุก 10 นาที (เวลา UTC)
+    - cron: '0 17 * * *' #'*/10 * * * *'  # ทุก 10 นาที (เวลา UTC)
   workflow_dispatch:  # เพิ่มปุ่มให้เรากดรันเองได้ด้วย
 
 jobs:
