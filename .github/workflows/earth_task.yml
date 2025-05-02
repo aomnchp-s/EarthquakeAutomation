@@ -18,4 +18,4 @@ jobs:
           python-version: '3.11'
 
       - name: Run script
-        run: python your_script.py
+        run: earthquake_region.py
