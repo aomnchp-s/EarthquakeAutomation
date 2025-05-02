@@ -17,5 +17,8 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: pip install requests pymongo
+
       - name: Run script
         run: python earthquake_region.py
