@@ -1,7 +1,7 @@
-name: Run Python Script Every 10 Minutes
+name: Sync Data Earthquake Every 10 Minutes
 on:
   schedule:
-    - cron: '0 17 * * *' #'*/10 * * * *'  # ทุก 10 นาที (เวลา UTC)
+    - cron: '*/10 * * * *'  # ทุก 10 นาที (เวลา UTC)
   workflow_dispatch:  # เพิ่มปุ่มให้เรากดรันเองได้ด้วย
 jobs:
   run-python:
@@ -16,4 +16,4 @@ jobs:
       - name: Install dependencies
         run: pip install requests pymongo
       - name: Run script
-        run: python earthquake_region.py
+        run: python earthquake_region_schedule.py
